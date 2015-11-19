@@ -2,7 +2,7 @@
 # create unique user
 1.times do 
   User.create!(
-    name: "Virginia Cooper",
+    username: "vrcooper",
     password:  "Test"
     ) 
 end
