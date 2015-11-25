@@ -19,4 +19,20 @@ class Api::ItemsController < ApiController
       end
     end
 
+    def destroy
+    begin
+      item = Item.find(params[:id])
+      item.destroy
+
+      render json: {}, status: :no_content
+    rescue ActiveRecord::RecordNotFound
+      render :json => {}, :status => :not_found
+    end
+  end
+
+private
+
+    def items_params
+      params.require(:item).permit(:name)
+    end
 end
