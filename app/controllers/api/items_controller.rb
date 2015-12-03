@@ -32,7 +32,7 @@ class Api::ItemsController < ApiController
 
 private
 
-    def items_params
+    def item_params
       params.require(:item).permit(:description)
     end
 end
