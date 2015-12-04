@@ -12,7 +12,7 @@ users = User.all
 # create unique item
 1.times do
   Item.create!(
-  name: "Laundry",
+  description: "Laundry",
 
     )
 end
@@ -22,7 +22,8 @@ items = Item.all
 # create unique list
 1.times do
   List.create!(
-  name: "Chores"
+  name: "Chores",
+  permissions: "private"
     )
 end
 
